@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: 'zcube/bitnami-compat-mongodb'
+    ports:
+      - 5432:5432
+    restart: on-failure
+    environment:
+      - MONGODB_ADVERTISED_HOSTNAME=localhost
+      - ALLOW_EMPTY_PASSWORD=yes
